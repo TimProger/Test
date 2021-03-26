@@ -1,0 +1,36 @@
+article {
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 50px;
+    gap: 30px;
+}
+.container {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+body {
+    font: 24px sans-serif;
+}
+h1 {
+    margin: 0 0 50px;
+    text-align: center;
+}
+h3 {
+    margin: 0;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+.info {
+    grid-column: 1 / 3;
+}
+.pic {
+    width: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+}
