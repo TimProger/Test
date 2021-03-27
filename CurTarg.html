@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .rect{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: inline-block;
+        }
+        .green{
+            background-color: green;
+        }
+        .orange{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    
+
+   <script>
+    "use strict";
+       let elements = document.body.children;
+       for(let i = 0; i<elements.length; i++){
+           if(elements[i].tagName == 'DIV'){
+               elements[i].addEventListener("mouseover", function(e){
+                   let cur_elem = e.currentTarget;
+                   let prev = cur_elem.nextElementSibling;
+                   let next = cur_elem.nextElementSibling.nextElementSibling;
+
+                   if (prev!=undefined){
+                       prev.classList.toggle('green');
+                       cur_elem.classList.toggle('orange');
+                   }
+                   if (next!=undefined){
+                       next.classList.toggle('green');
+                       cur_elem.classList.toggle('orange');
+                       
+                   }else{
+                    cur_elem.classList.toggle('orange');
+
+                   }
+               });
+           }
+       }
+    </script>
+
+</body>
+</html>
