@@ -48,6 +48,7 @@ for(let i = 0; i < 3; i++){
 
     let h3 = document.createElement('h3')
     h3.innerHTML = "Город"
+    h4.innerHTML = "Город"
 
     let divpic = document.createElement('div');
     divpic.classList.add('pic');
